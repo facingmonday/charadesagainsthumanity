@@ -1,0 +1,45 @@
+@import '../variables.less';
+
+.App{
+  &-container{
+  	height: 100%;
+  	width: 100%;
+	overflow: auto;
+	td.left-col-td{
+	  float:none !important;
+	  vertical-align: top;
+	  
+	  @media only screen and (max-width: 991px){
+	  	float:left !important;
+	  }
+	  @-moz-document url-prefix() { 
+		  float:none !important;
+		  width: 30%;
+		}
+	  @media @mobile{
+	  	float:left !important;
+	  	width: 100%;
+	  }
+	}
+	td.right-col-td{
+	  float:none !important;
+	  vertical-align: top;
+	  @media @mobile{
+	  	float:left !important;
+	  }
+	}
+  }
+  &-page-container{
+	  padding: 1em 1.5em 1em 0.5em;
+	  @media @mobile{
+	  	padding: 0 1em;
+	  }
+  }
+}
+
+.blocker {
+  z-index: 2 !important;
+}
+.modal {
+  z-index: 3 !important;
+}

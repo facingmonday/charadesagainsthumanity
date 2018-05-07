@@ -1,0 +1,27 @@
+@import '../variables.less';
+
+.AlertMessage{
+  &-component-container{
+  	.alert {
+	   border-radius: 0px 0px 4px 4px;
+	   display: none;
+	   margin-bottom: 0;
+	}
+	strong{
+		font-family: @mainFontFamilyBold;
+		text-transform:capitalize;
+	}
+   @media @mobile{
+  		padding:0;
+  		position: fixed;
+  		z-index: 1;
+  		top: 0;
+	  	.alert {
+		   border-radius: 0;
+		}
+		strong{
+			display: block;
+		}
+   }
+  }
+}
